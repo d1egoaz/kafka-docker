@@ -1,8 +1,17 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/wurstmeister/kafka.svg)](https://hub.docker.com/r/wurstmeister/kafka/)
-[![Docker Stars](https://img.shields.io/docker/stars/wurstmeister/kafka.svg)](https://hub.docker.com/r/wurstmeister/kafka/)
-[![](https://images.microbadger.com/badges/version/wurstmeister/kafka.svg)](https://microbadger.com/images/wurstmeister/kafka "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/wurstmeister/kafka.svg)](https://microbadger.com/images/wurstmeister/kafka "Get your own image badge on microbadger.com")
-[![Build Status](https://travis-ci.org/wurstmeister/kafka-docker.svg?branch=master)](https://travis-ci.org/wurstmeister/kafka-docker)
+NEW
+============
+See `Makefile`
+
+- Run `make up` to run a 3 broker cluster.
+- Run `make down` to turn down the cluster.
+- Run `make scale-up-kafka1` or `make scale-down-kafka1` to scale up/down a broker.
+
+To run `kafkacat` commands:
+1. Run `make kafkacat-configure` to setup the `.kafkacat.conf` file.
+2. Run `make kafkacat-meta` to see an example of running kafkacat given a config file.
+
+
+The `Makefile` assumes that this command will return your current machine local ip: `ipconfig getifaddr en0`.
 
 kafka-docker
 ============
